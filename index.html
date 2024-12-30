@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Science Academy, Gadhinglaj</title>
     <style>
-        /* General styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,7 +18,7 @@
             padding: 20px;
             text-align: center;
             position: fixed;
-            z-index: 999;
+            z-index : 999;
             width: 100%;
         }
 
@@ -125,45 +124,59 @@
 
         /* Modal styles */
         .modal {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
         }
 
         .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border-radius: 8px;
+            position: relative;
             width: 80%;
             max-width: 600px;
+            margin: 10% auto;
+            padding: 20px;
             text-align: center;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .modal img {
+            width: 100%;
+            border-radius: 8px;
         }
 
         .modal h2 {
-            margin-top: 0;
+            margin-top: 20px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .modal p {
+            font-size: 1.1em;
+            color: #555;
         }
 
         .close {
             color: #aaa;
-            float: right;
+            position: absolute;
+            top: 10px;
+            right: 10px;
             font-size: 28px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .close:hover,
         .close:focus {
             color: black;
-            text-decoration: none;
-            cursor: pointer;
         }
 
-        /* Media queries for mobile responsiveness */
+        /* Responsive Styles */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2em;
@@ -196,12 +209,13 @@
 </head>
 <body>
 
-    <!-- Modal (Result Window) -->
+    <!-- Modal (Result Window with JPG Image) -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Result: Admission Open!</h2>
-            <p>Congratulations! You can now apply for the courses at Super Science Academy, Gadhinglaj. Please click below to proceed with the registration.</p>
+            <img src="your-image.jpg" alt="Result Image"> <!-- Replace "your-image.jpg" with the actual image path -->
+            <h2>Admission Result: Open for Registration!</h2>
+            <p>Congratulations! You can now apply for courses at Super Science Academy, Gadhinglaj. Please click below to proceed with the registration.</p>
             <a href="#registration" style="text-decoration: none; color: white; background-color: #1abc9c; padding: 10px 20px; border-radius: 5px;">Proceed to Registration</a>
         </div>
     </div>
@@ -218,18 +232,20 @@
             <a href="#registration">Student Registration</a>
         </nav>
     </header>
-
+    
     <section class="hero">
         <h1>Welcome to Super Science Academy</h1>
         <p>Empowering Students for Success in Competitive Exams like JEE, NEET, MHT-CET, and more!</p>
     </section>
-
+    
     <div class="container">
+        <!-- About Us Section -->
         <div id="about" class="card">
             <h2>About Us</h2>
             <p>Super Science Academy, Gadhinglaj, is dedicated to providing top-quality education to students from 8th to 12th grade. We specialize in preparing students for competitive exams like JEE (Mains & Advanced), NEET, MHT-CET, and other national and state-level exams.</p>
         </div>
-
+        
+        <!-- Courses Section -->
         <div id="courses" class="card">
             <h2>Our Courses</h2>
             <ul>
@@ -242,6 +258,7 @@
             </ul>
         </div>
 
+        <!-- Infrastructure Section -->
         <div id="infrastructure" class="card">
             <h2>Our Infrastructure</h2>
             <div class="slideshow-container">
@@ -263,83 +280,6 @@
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <p>Our academy boasts state-of-the-art classrooms, modern laboratories, and a well-stocked library to provide a conducive learning environment for our students.</p>
         </div>
 
-        <div id="staff" class="card">
-            <h2>Meet Our Staff</h2>
-            <!-- Staff content here... -->
-        </div>
-
-        <div id="contact" class="card">
-            <h2>Contact Us</h2>
-            <p><strong>Address:</strong> Super Science Academy, Delta Building, Behind Dr. Kalyanshetti Hospital, Church Road, Gadhinglaj (416502), Maharashtra</p>
-            <p><strong>Email:</strong> sbpsuperscience@gmail.com</p>
-            <p><strong>Phone:</strong> (02327) 222077, +91 9371061009, +91 9226935427, +91 9272335192</p>
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" loading="lazy"></iframe>
-        </div>
-
-        <div id="registration" class="card">
-            <h2>Student Registration</h2>
-            <p>Please fill out the registration form below to enroll in our courses:</p>
-            <iframe 
-                src="https://forms.gle/38YAtpW2yygtN4dAA" 
-                height="800">
-            </iframe>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Super Science Academy, Gadhinglaj. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // Modal logic
-        var modal = document.getElementById("myModal");
-        var span = document.getElementsByClassName("close")[0];
-
-        // Open the modal
-        window.onload = function() {
-            modal.style.display = "block";
-        }
-
-        // Close the modal when the user clicks the close button
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // Close the modal if the user clicks anywhere outside of the modal
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-
-        function plusSlides(n) {
-            let slides = document.getElementsByClassName("slides");
-            slideIndex += n;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            if (slideIndex < 1) {slideIndex = slides.length}
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
-
-</body>
-</html>
+        <!-- Other Sections
