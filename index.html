@@ -11,95 +11,46 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-
-        /* Styling for the academy label */
-        .academy-label {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        /* Adding space and size control for logo image */
-        .academy-label img {
-            height: 50px; /* Adjust the height as needed */
-            margin-right: 10px;
-            vertical-align: middle; /* Align the logo vertically */
-        }
-
-        /* Header styling */
         header {
             background-color: #2c3e50;
             color: white;
             padding: 20px;
             text-align: center;
             position: fixed;
-            top: 80px; /* Adjusted for space between academy label and header */
-            width: 100%;
-            z-index: 999;
+            z-index : 999;
         }
-
-        /* Flexbox layout for header */
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        /* Academy logo in header */
-        .header-logo {
-            height: 50px; /* Adjust the logo size as needed */
-        }
-
-        /* Academy name styling in header */
-        .academy-name {
-            font-size: 2em;
-            margin-left: 20px;
-        }
-
-        /* Navigation styling */
         nav {
             background-color: #34495e;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-
         nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
         }
-
         nav a:hover {
             background-color: #1abc9c;
             color: white;
         }
-
         .hero {
             text-align: center;
             padding: 50px 20px;
             background: linear-gradient(to right, #1abc9c, #16a085);
             color: white;
         }
-
         .hero h1 {
             margin: 0;
             font-size: 2.5em;
         }
-
         .hero p {
             font-size: 1.2em;
         }
-
         .container {
             padding: 20px;
         }
-
         .card {
             background: white;
             margin: 20px;
@@ -107,11 +58,9 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .card h2 {
             margin-top: 0;
         }
-
         .slideshow-container {
             position: relative;
             max-width: 100%;
@@ -119,16 +68,13 @@
             border-radius: 8px;
             overflow: hidden;
         }
-
         .slides {
             display: none;
         }
-
         .slides img {
             width: 100%;
             border-radius: 8px;
         }
-
         .prev, .next {
             cursor: pointer;
             position: absolute;
@@ -140,28 +86,120 @@
             border-radius: 50%;
             user-select: none;
         }
-
         .prev {
             left: 10px;
         }
-
         .next {
             right: 10px;
         }
-
         footer {
             background-color: #2c3e50;
             color: white;
             text-align: center;
             padding: 10px;
         }
-
         iframe {
             width: 100%;
             border: none;
         }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .prev, .next {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            nav a {
+                padding: 10px 5px;
+                font-size: 14px;
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .hero p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Super Science Academy, Gadhinglaj</h1>
+        <p>Practice makes man perfect!</p>
+        <nav>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#infrastructure">Infrastructure</a>
+        <a href="#staff">Staff</a>
+        <a href="#contact">Contact</a>
+        <a href="#registration">Student Registration</a>
+    </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Welcome to Super Science Academy</h1>
+        <p>Empowering Students for Success in Competitive Exams like JEE, NEET, MHT-CET, and more!</p>
+    </section>
+    <div class="container">
+        <div id="about" class="card">
+            <h2>About Us</h2>
+            <p>Super Science Academy, Gadhinglaj, is dedicated to providing top-quality education to students from 8th to 12th grade. We specialize in preparing students for competitive exams like JEE (Mains & Advanced), NEET, MHT-CET, and other national and state-level exams.</p>
+        </div>
+        <div id="courses" class="card">
+            <h2>Our Courses</h2>
+            <ul>
+                <li>Foundation Courses for 8th to 10th Grade</li>
+                <li>Science Stream Coaching for 11th and 12th Grade</li>
+                <li>JEE Mains and Advanced Preparation</li>
+                <li>NEET Coaching</li>
+                <li>MHT-CET Preparation</li>
+                <li>Other Competitive Exams</li>
+            </ul>
+        </div>
+        <div id="infrastructure" class="card">
+            <h2>Our Infrastructure</h2>
+            <div class="slideshow-container">
+                <div class="slides">
+                    <img src="Slide1.jpg" alt="Infrastructure Photo 1">
+                </div>
+                <div class="slides">
+                    <img src="delta.jpg" alt="Infrastructure Photo 2">
+                </div>
+                <div class="slides">
+                    <img src="DSC_2965.jpg" alt="Infrastructure Photo 3">
+                </div>
+                <div class="slides">
+                    <img src="DSC_2983.jpg" alt="Infrastructure Photo 4">
+                </div>
+                <div class="slides">
+                    <img src="DSC_2991.jpg" alt="Infrastructure Photo 5">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <p>Our academy boasts state-of-the-art classrooms, modern laboratories, and a well-stocked library to provide a conducive learning environment for our students.</p>
+        </div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Staff</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
 
-        /* Staff Section Styling */
         #staff {
             text-align: center;
             padding: 40px;
@@ -223,139 +261,44 @@
                 font-size: 0.9em;
             }
         }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .prev, .next {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav a {
-                padding: 10px 5px;
-                font-size: 14px;
-            }
-
-            .hero h1 {
-                font-size: 1.8em;
-            }
-
-            .hero p {
-                font-size: 0.9em;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Academy Label with Logo -->
-    <div class="academy-label">
-        <img src="academy_logo.png" alt="Academy Logo">
-        <h2>Academy</h2>
+    <div id="staff" class="card">
+        <h2>Meet Our Staff</h2>
+        <div class="staff-grid">
+            <div class="staff-member">
+                <img src="SBP.jpg" alt="Prof. S. B. Patil">
+                <p><strong>Prof. S. B. Patil sir:</strong> MSc in Mathematics, 32 years of teaching experience.</p>
+            </div>
+            <div class="staff-member">
+                <img src="Sudarshan.jpg" alt="Mr. Sudarshan K. Rajgole">
+                <p><strong>Mr. Sudarshan K. Rajgole:</strong> B. Tech (CS, Walchand)</p>
+            </div>
+            <div class="staff-member">
+                <img src="Devendra.jpg" alt="Dr. Devendra Kamble">
+                <p><strong>Dr. Devendra Kamble:</strong> M Tech (Mechanical, NIT Surathkal), PhD</p>
+            </div>
+            <div class="staff-member">
+                <img src="Rutvik.jpg" alt="Mr. Rutvik Jitkar">
+                <p><strong>Mr. Rutvik Jitkar:</strong> B. Tech (CS)</p>
+            </div>
+            <div class="staff-member">
+                <img src="Akshay.jpg" alt="Mr. Akshay Kulkarni">
+                <p><strong>Mr. Akshay Kulkarni:</strong> MSc (Organic Chem), PhD</p>
+            </div>
+            <div class="staff-member">
+                <img src="Sumaiya.jpg" alt="Mrs. Sumaiya Mulla">
+                <p><strong>Mrs. Sumaiya Mulla:</strong> MSc BEd (Zoology)</p>
+            </div>
+            <div class="staff-member">
+                <img src="yftf.jpg" alt="Mr. Vinayak Mane">
+                <p><strong>Dr. Shrikant Patil:</strong> PhD(Double) Botany</p>
+            </div>
+        </div>
     </div>
-
-    <!-- Header Section -->
-    <header>
-        <div class="header-content">
-            <!-- Academy Logo in Header -->
-            <img src="Logo.jpg" alt="Academy Logo" class="header-logo">
-            <!-- Academy Name -->
-            <h1 class="academy-name">Super Science Academy, Gadhinglaj</h1>
-        </div>
-        <p>Practice makes man perfect!</p>
-        <nav>
-            <a href="#about">About Us</a>
-            <a href="#courses">Courses</a>
-            <a href="#infrastructure">Infrastructure</a>
-            <a href="#staff">Staff</a>
-            <a href="#contact">Contact</a>
-            <a href="#registration">Student Registration</a>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <h1>Welcome to Super Science Academy</h1>
-        <p>Empowering Students for Success in Competitive Exams like JEE, NEET, MHT-CET, and more!</p>
-    </section>
-
-    <div class="container">
-        <div id="about" class="card">
-            <h2>About Us</h2>
-            <p>Super Science Academy, Gadhinglaj, is dedicated to providing top-quality education to students from 8th to 12th grade. We specialize in preparing students for competitive exams like JEE (Mains & Advanced), NEET, MHT-CET, and other national and state-level exams.</p>
-        </div>
-
-        <div id="courses" class="card">
-            <h2>Our Courses</h2>
-            <ul>
-                <li>Foundation Courses for 8th to 10th Grade</li>
-                <li>Science Stream Coaching for 11th and 12th Grade</li>
-                <li>JEE Mains and Advanced Preparation</li>
-                <li>NEET Coaching</li>
-                <li>MHT-CET Preparation</li>
-                <li>Other Competitive Exams</li>
-            </ul>
-        </div>
-
-        <div id="infrastructure" class="card">
-            <h2>Our Infrastructure</h2>
-            <div class="slideshow-container">
-                <div class="slides">
-                    <img src="Slide1.jpg" alt="Infrastructure Photo 1">
-                </div>
-                <div class="slides">
-                    <img src="delta.jpg" alt="Infrastructure Photo 2">
-                </div>
-                <div class="slides">
-                    <img src="DSC_2965.jpg" alt="Infrastructure Photo 3">
-                </div>
-                <div class="slides">
-                    <img src="DSC_2983.jpg" alt="Infrastructure Photo 4">
-                </div>
-                <div class="slides">
-                    <img src="DSC_2991.jpg" alt="Infrastructure Photo 5">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <p>Our academy boasts state-of-the-art classrooms, modern laboratories, and a well-stocked library to provide a conducive learning environment for our students.</p>
-        </div>
-
-        <div id="staff" class="card">
-            <h2>Meet Our Staff</h2>
-            <div class="staff-grid">
-                <div class="staff-member">
-                    <img src="SBP.jpg" alt="Prof. S. B. Patil">
-                    <p><strong>Prof. S. B. Patil sir:</strong> MSc in Mathematics, 32 years of teaching experience.</p>
-                </div>
-                <div class="staff-member">
-                    <img src="Sudarshan.jpg" alt="Mr. Sudarshan K. Rajgole">
-                    <p><strong>Mr. Sudarshan K. Rajgole:</strong> B. Tech (CS, Walchand)</p>
-                </div>
-                <div class="staff-member">
-                    <img src="Devendra.jpg" alt="Dr. Devendra Kamble">
-                    <p><strong>Dr. Devendra Kamble:</strong> M Tech (Mechanical, NIT Surathkal), PhD</p>
-                </div>
-                <div class="staff-member">
-                    <img src="Rutvik.jpg" alt="Mr. Rutvik Jitkar">
-                    <p><strong>Mr. Rutvik Jitkar:</strong> B. Tech (CS)</p>
-                </div>
-                <div class="staff-member">
-                    <img src="Akshay.jpg" alt="Mr. Akshay Kulkarni">
-                    <p><strong>Mr. Akshay Kulkarni:</strong> MSc (Organic Chem), PhD</p>
-                </div>
-                <div class="staff-member">
-                    <img src="Sumaiya.jpg" alt="Mrs. Sumaiya Mulla">
-                    <p><strong>Mrs. Sumaiya Mulla:</strong> MSc BEd (Zoology)</p>
-                </div>
-            </div>
-        </div>
+</body>
+</html>
 
         <div id="contact" class="card">
             <h2>Contact Us</h2>
@@ -364,32 +307,42 @@
             <p><strong>Phone:</strong> (02327) 222077, +91 9371061009, +91 9226935427, +91 9272335192</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3830.9505138467625!2d74.3442267!3d16.2229836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc08f3d6d5f75cf%3A0xe5739107a758d077!2sSuper%20Science%20Academy!5e0!3m2!1sen!2sin!4v1734685565730!5m2!1sen!2sin" width="600" height="450" loading="lazy"></iframe>
         </div>
-
         <div id="registration" class="card">
             <h2>Student Registration</h2>
             <p>Please fill out the registration form below to enroll in our courses:</p>
-            <iframe src="https://forms.gle/38YAtpW2yygtN4P69" width="100%" height="500px"></iframe>
+            <iframe 
+                src="https://forms.gle/38YAtpW2yygtN4dAA" 
+                height="800">
+            </iframe>
         </div>
     </div>
-
     <footer>
-        <p>&copy; 2024 Super Science Academy, Gadhinglaj</p>
+        <p>&copy; 2024 Super Science Academy, Gadhinglaj. All Rights Reserved.</p>
     </footer>
-
     <script>
-        var slideIndex = 0;
+        let slideIndex = 0;
         showSlides();
+
         function showSlides() {
-            var slides = document.getElementsByClassName("slides");
-            for (var i = 0; i < slides.length; i++) {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function plusSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            slideIndex += n;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            if (slideIndex < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
+            slides[slideIndex - 1].style.display = "block";
         }
     </script>
 </body>
