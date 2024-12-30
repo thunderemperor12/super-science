@@ -184,21 +184,118 @@
             </div>
             <p>Our academy boasts state-of-the-art classrooms, modern laboratories, and a well-stocked library to provide a conducive learning environment for our students.</p>
         </div>
-        <div id="staff" class="card">
-            <h2>Meet Our Staff</h2>
-            <img src="SBP.jpg" alt="Staff Member 1">
-            <p><strong>Prof. S. B. Patil sir:</strong> MSc in Mathematics,32 years of teaching experience.</p>
-            <img src="Sudarshan.jpg" alt="Staff Member 2">
-            <p><strong>Mr. Sudarshan K. Rajgole:</strong> B. Tech (CS, Walchand)</p>
-            <img src="Devendra.jpg" alt="Staff Member 3">
-            <p><strong>Dr. Devendra Kamble:</strong> M Tech(Mechanical, NIT Surathkal), PhD</p>
-            <img src="Rutvik.jpg" alt="Staff Member 4">
-            <p><strong>Mr. Rutvik Jitkar:</strong> B. Tech(CS)</p>
-            <img src="Akshay.jpg" alt="Staff Member 5">
-            <p><strong>Mr. Akshay Kulkarni:</strong> MSc(Organic chem), PhD</p>
-            <img src="Sumaiya.jpg" alt="Staff Member 6">
-            <p><strong>Mrs. Sumaiya Mulla:</strong> MSc BEd(Zoology)</p>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Staff</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        #staff {
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        #staff h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Grid layout for staff */
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Staff member styling */
+        .staff-member {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .staff-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .staff-member p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Hover effect */
+        .staff-member:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            #staff h2 {
+                font-size: 2em;
+            }
+
+            .staff-grid {
+                grid-template-columns: 1fr; /* Single column layout on mobile */
+            }
+
+            .staff-member p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="staff" class="card">
+        <h2>Meet Our Staff</h2>
+        <div class="staff-grid">
+            <div class="staff-member">
+                <img src="SBP.jpg" alt="Prof. S. B. Patil">
+                <p><strong>Prof. S. B. Patil sir:</strong> MSc in Mathematics, 32 years of teaching experience.</p>
+            </div>
+            <div class="staff-member">
+                <img src="Sudarshan.jpg" alt="Mr. Sudarshan K. Rajgole">
+                <p><strong>Mr. Sudarshan K. Rajgole:</strong> B. Tech (CS, Walchand)</p>
+            </div>
+            <div class="staff-member">
+                <img src="Devendra.jpg" alt="Dr. Devendra Kamble">
+                <p><strong>Dr. Devendra Kamble:</strong> M Tech (Mechanical, NIT Surathkal), PhD</p>
+            </div>
+            <div class="staff-member">
+                <img src="Rutvik.jpg" alt="Mr. Rutvik Jitkar">
+                <p><strong>Mr. Rutvik Jitkar:</strong> B. Tech (CS)</p>
+            </div>
+            <div class="staff-member">
+                <img src="Akshay.jpg" alt="Mr. Akshay Kulkarni">
+                <p><strong>Mr. Akshay Kulkarni:</strong> MSc (Organic Chem), PhD</p>
+            </div>
+            <div class="staff-member">
+                <img src="Sumaiya.jpg" alt="Mrs. Sumaiya Mulla">
+                <p><strong>Mrs. Sumaiya Mulla:</strong> MSc BEd (Zoology)</p>
+            </div>
         </div>
+    </div>
+</body>
+</html>
+
         <div id="contact" class="card">
             <h2>Contact Us</h2>
             <p><strong>Address:</strong> Super Science Academy, Delta Building, Behind Dr. Kalyanshetti Hospital, Church Road, Gadhinglaj (416502), Maharashtra</p>
